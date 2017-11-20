@@ -49,7 +49,8 @@ public class TexturedSquare {
 			i, i, i
 	};
 
-	private short mDrawOrder[] = {0, 1, 2, 0, 2, 3};
+//	private short mDrawOrder[] = {0, 1, 2, 0, 2, 3};
+	private short mDrawOrder[] = {3, 0, 1, 1, 2, 3};
 	private final int mProgram;
 	private int mPositionHandle;
 	private int mColorHandle;

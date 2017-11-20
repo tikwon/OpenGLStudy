@@ -162,7 +162,7 @@ public class SquareOrigin {
     /* Initialize Texture */
     public void InitTexture(GL10 gl, Context context) {
 
-        Bitmap imgPanda = BitmapFactory.decodeResource(context.getResources(), R.drawable.pjm);
+        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.maxst_logo);
 
         gl.glGenTextures(1, textureName, 0);					// 텍스쳐 포인터 설정
         gl.glBindTexture(GL10.GL_TEXTURE_2D, textureName[0]);	// 텍스쳐 사용 연결
@@ -170,9 +170,9 @@ public class SquareOrigin {
         gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MIN_FILTER, GL10.GL_NEAREST);
         gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MAG_FILTER, GL10.GL_LINEAR);
 
-        GLUtils.texImage2D(GL10.GL_TEXTURE_2D, 0, imgPanda, 0);
+        GLUtils.texImage2D(GL10.GL_TEXTURE_2D, 0, bitmap, 0);
 
-        imgPanda.recycle();
+        bitmap.recycle();
     }
 
 }
