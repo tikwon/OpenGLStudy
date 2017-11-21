@@ -34,8 +34,8 @@ public class TexturedSquareRenderer implements GLSurfaceView.Renderer {
 		Bitmap image = BitmapFactory.decodeResource(context.getResources(), context.getResources().getIdentifier("drawable/maxst_logo",null,context.getPackageName()));
 		texturedSquare = new TexturedSquare(image);
 
-//		GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
-//		GLES20.glClearColor(1.0f, 1.0f, 0.0f, 1.0f);
+		GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+		GLES20.glClearColor(1.0f, 1.0f, 0.0f, 1.0f);
 
 		Log.i(TAG, "onSurfaceCreated");
 	}
@@ -53,8 +53,8 @@ public class TexturedSquareRenderer implements GLSurfaceView.Renderer {
 
 	@Override
 	public void onDrawFrame(GL10 gl) {
-		GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
-		GLES20.glClearColor(1.0f, 1.0f, 0.0f, 1.0f);
+		//GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+		//GLES20.glClearColor(1.0f, 1.0f, 0.0f, 1.0f);
 		texturedSquare.draw();
 
 		Log.i(TAG, "onDrawFrame");

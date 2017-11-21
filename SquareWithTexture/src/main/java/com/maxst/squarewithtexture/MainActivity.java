@@ -4,8 +4,7 @@ import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
-import com.maxst.squarewithtexture.SurfaceView.SquareSurfaceView;
-import com.maxst.squarewithtexture.SurfaceView.TexturedSquareSurfaceView;
+import com.maxst.squarewithtexture.SurfaceView.CameraPreview;
 
 public class MainActivity extends Activity {
 
@@ -20,8 +19,14 @@ public class MainActivity extends Activity {
 //		mGLView = new MyGLSurfaceView(this);
 //		mGLView = new TriangleSurfaceView(this);
 //		mGLView = new SquareSurfaceView(this);
-		mGLView = new TexturedSquareSurfaceView(this);
+//		mGLView = new TexturedSquareSurfaceView(this);
+		mGLView = new CameraPreview(this);
 		setContentView(mGLView);
+
+//		// Now also create a view which contains the camera preview...
+//		cameraView = new CameraView( this );
+//		// ...and add it, wrapping the full screen size.
+//		addContentView( cameraView, new ActionBar.LayoutParams( ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT ) );
 	}
 
 	@Override
